@@ -1,10 +1,10 @@
 # December Project Setup
 
 ## Project Overview
-This project is a React application set up using Vite. It serves as the foundation for the CourseHub project.
+Using Vite to set up using React which is the foundation for this December Project.
 
 ### What is NPM?
-**NPM (Node Package Manager)** is the default package manager for the JavaScript runtime environment Node.js. It serves two main purposes:
+**NPM (Node Package Manager)** stands for Node Package Manager and it is the default package manager for the JavaScript runtime environment Node.js. It serves two main purposes:
 * **Registry:** It acts as an online database (repository) of public and paid-for private packages, often called the "App Store for developers."
 * **CLI Tool:** It is a command-line utility that developers use to interact with this repository. It allows us to install, update, and manage the external libraries (dependencies) our project needs to function.
 
