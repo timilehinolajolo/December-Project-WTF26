@@ -1,35 +1,156 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { 
+  Clock, 
+  MapPin, 
+  Phone, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  Search, 
+  User,
+  Menu
+} from 'lucide-react';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const EdunityLanding = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="font-sans text-gray-800 ">
+      
+      {/*TOP BAR */}
+      <div className="bg-[#17254E] text-white text-xs py-3 px-3 md:px-12 hidden md:flex justify-between items-center">
+        <div className="flex gap-6">
+          <span className="flex items-center gap-2">
+            <Clock size={14} className="text-[#FE543D]" />
+            Working : Monday - Friday 9 am - 5 pm
+          </span>
+          <span className="flex items-center gap-2">
+            <MapPin size={14} className="text-[#FE543D]" />
+            Hudson, Wisconsin(WI), 54016
+          </span>
+        </div>
+        <div className="flex gap-6 items-center">
+          <span className="flex items-center gap-2 cursor-pointer hover:text-[#00cbb8] transition">
+            <User size={14} className="text-[#FE543D]" />
+            Login / Register
+          </span>
+          <div className="flex gap-3 border-l border-gray-600 pl-4">
+            <Facebook size={14} className="cursor-pointer hover:text-[#00cbb8]" />
+            <Twitter size={14} className="cursor-pointer hover:text-[#00cbb8]" />
+            <Linkedin size={14} className="cursor-pointer hover:text-[#00cbb8]" />
+            <Instagram size={14} className="cursor-pointer hover:text-[#00cbb8]" />
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
 
-export default App
+      {/* NAVBAR */}
+      <nav className="sticky top-0 z-50 bg-white shadow-sm py-4 px-4 md:px-12 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img class="w-22" src="/src/images/home/edunity-logo.png"/>
+        </div>
+
+        {/* Desktop Links */}
+        <ul className="hidden lg:flex gap-8 font-medium text-[#1b1f4e]">
+          <li className="text-[#00cbb8] cursor-pointer">Home</li>
+          <li className="hover:text-[#00cbb8] cursor-pointer transition">About Us</li>
+          <li className="hover:text-[#00cbb8] cursor-pointer transition">Courses</li>
+          <li className="hover:text-[#00cbb8] cursor-pointer transition">Pages</li>
+          <li className="hover:text-[#00cbb8] cursor-pointer transition">Blog</li>
+          <li className="hover:text-[#00cbb8] cursor-pointer transition">Contact</li>
+        </ul>
+
+        {/* Search & CTA */}
+        <div className="hidden lg:flex items-center gap-4">
+          <Search size={20} className="text-gray-500 cursor-pointer hover:text-[#00cbb8]" />
+          <button className="bg-[#00cbb8] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#00b0a0] transition shadow-lg shadow-teal-200">
+            Contact Us
+          </button>
+        </div>
+
+        {/* Mobile Menu Icon */}
+        <Menu className="lg:hidden text-[#1b1f4e]" size={28} />
+      </nav>
+
+      {/*HERO SECTION */}
+      <header className="relative bg-[linear-gradient(to_right,#F4E9E7,#DDF0EC)] px-4 md:px-12 py-16 lg:py-24 overflow-hidden">
+        
+        {/* Decorative Circle (Background) */}
+        <div className="absolute top-10 right-0 w-[600px] h-[600px] bg-pink-100 rounded-full blur-3xl -z-10 opacity-50"></div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+          
+          {/* Left Content */}
+          <div className="space-y-6 z-10">
+            <span className="inline-block text-[#00cbb8] px-4 py-1 rounded-full text-sm font-semibold tracking-wide">
+              Learn & Get Certified
+            </span>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold text-[#1b1f4e] leading-tight">
+              Free Online Courses <br />
+              With Certificates & <br />
+              Diplomas
+            </h1>
+            
+            <p className="text-gray-500 text-lg max-w-md">
+              25 Million Learners. 15 Years. 100%
+            </p>
+
+            {/* Search Input Box */}
+            <div className="bg-white p-2 rounded-full shadow-lg max-w-md flex items-center mt-8">
+              <input 
+                type="text" 
+                placeholder="What do you want to learn today?" 
+                className="flex-1 px-4 py-2 outline-none text-gray-600 bg-transparent"
+              />
+              <button className="bg-[#00cbb8] p-3 rounded-full text-white hover:bg-[#00b0a0] transition">
+                <Search size={20} />
+              </button>
+            </div>
+          </div>
+
+          {/* Right Content (Images) */}
+          <div className="relative h-[500px] w-full hidden lg:block">
+                <div className="absolute top-10 z-10 left-32 bg-white p-3 rounded-5xl shadow-lg flex items-center gap-3 z-2 animate-bounce-slow">
+                  <div>
+                   <p className="text-sm font-bold text-[#1b1f4e]">2k+</p>
+                   <p className="text-xs text-gray-500">Student</p>
+                 </div>
+                 <div className="flex -space-x-2">
+                    <img src='/src/images/home/users-icon.png'/>
+                 </div>
+               </div>
+            <div className="absolute left-0 bottom-0 w-56 h-100 bg-[#b1aaff] rounded-full overflow-hidden shadow-xl z-10 transform translate-y-4">
+               <img 
+                 src="/src/images/home/female-student.png" 
+                 alt="Student" 
+                 className="w-full h-full object-cover"
+               />
+
+            </div>
+
+            <div className="absolute right-12 top-0 w-64 h-126 bg-[#2d5da1] rounded-full overflow-hidden shadow-xl z-0">
+               <img 
+                 src="/src/images/home/male-student.png"
+                 alt="Student" 
+                 className="w-full h-full object-cover"
+               />
+            </div>
+            
+            <div className="absolute bottom-20 right-[-20px] bg-white px-4 py-2 rounded-xl shadow-lg flex items-center gap-3 z-30">
+              
+               <div>
+                  <p className="text-sm font-bold text-slate-900">5.8k</p>
+                  <p className="text-[10px] text-slate-500">Success Courses</p>
+               </div>
+            </div>
+
+            <div className="absolute top-4 left-20 w-3 h-3 bg-orange-400 rounded-full"></div>
+            <div className="absolute bottom-1/2 right-0 w-4 h-4 bg-teal-400 rounded-full"></div>
+          </div>
+        </div>
+      </header>
+    </div>
+  );
+};
+
+export default EdunityLanding;
